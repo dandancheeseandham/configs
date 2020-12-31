@@ -16,6 +16,7 @@
 		Comment out M574 endstop definition, add two new M574 lines
 		Comment out M307 and M558 for bltouch, add in new M950 & M558.  (adjust F,T,A,S values if you've customized them)
 		IF YOU USE A PIEZO, IR PROBE, OR OTHER ZPROBE YOU NEED TO MODIFY YOUR M558 ACCORDINGLY
+		RRF 3.1 or later requires an M140 for the Bed. It's OK to add it for RRF3.0 as well, so add it.
 6) upload duet2and3firmeware-3.0.zip and reboot when it prompts
 7) Check hotend / bed show correct values FIRST.  If not, stop immediately so we can fix that. (I highly recommend you have your hotend fan always on for these tests)
 8) Check your x/y endstop status using M119 (both with endstop triggered and open)

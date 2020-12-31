@@ -54,6 +54,7 @@ M308 S1 P"e0temp" Y"thermistor" A"e0_heat" T100000 B4725 R4700 C7.06e-8 H0 L0	;_
 ;M308 S1 P"e0temp" Y"thermistor" A"e0_heat" T500000 B4723 R4700 C1.196220e-7	;_RRF3_ slice thermistor
 
 M950 H0 C"bedheat" T0				;_RRF3_ define Bed heater is on bedheat
+M140 H0								;__RRF3__ define bed heater (Required in 3.1 or later)
 M950 H1 C"e0heat" T1				;_RRF3_ define Hotend heater is on e0heat
 
 M307 H0 A240.3 C608.7 D8.2 S1.00 V24.1 B0 ; Bed Heaters
@@ -91,7 +92,7 @@ G10 P0 S0 R0                        	; Set tool 0 operating and standby temperat
 ;_RRF3_ comment out: M558 P9 X0 Y0 Z1 H5 F50 T6000 A5 S0.02  
 M558 P9 C"^zprobe.in" H5 R1 F50 T6000 A5 S0.02  ; _RRF3_ BLTouch connected to Z probe IN pin
 M950 S0 C"duex.pwm1"				   ; _RRF3_ Define BLTouch Servo (S0) on duet pwm1
-G31 X2 Y42 Z2.65 P25 ; Customize your offsets appropriately - do a paper test, and put the probed value in the Z value here
+G31 X-4 Y42 Z2.65 P25 ; Customize your offsets appropriately - do a paper test, and put the probed value in the Z value here
 
 
 T0					; select first hot end

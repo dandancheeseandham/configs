@@ -61,6 +61,6 @@ G10 P0 S0 R0                        		;Set tool 0 operating and standby temperat
 ;BLTouch
 M558 P9 C"io7.in" H5 R1 F120 T6000 A5 S0.02 B1	;define the bltouch input on io7.in
 M950 S0 C"io7.out"				;define the bltouch servo on io7.out
-G31 X2 Y42 Z2.00 P25 			;set the offsets for the bltouch
+G31 X-4 Y42 Z2.00 P25 			;set the offsets for the bltouch
 
 T0						;select first hot end
